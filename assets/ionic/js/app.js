@@ -29,7 +29,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       views: {
         'pets-tab': {
           templateUrl: '/ionic/templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+          controller: 'employeeCtrl'
         }
       }
     })

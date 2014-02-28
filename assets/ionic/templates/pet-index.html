@@ -8,9 +8,13 @@
 
     <ion-list>
 
-      <ion-item ng-repeat="pet in pets" type="item-text-wrap" href="#/tab/pet/{{pet.id}}">
-        <h3>{{pet.title}}</h3>
-        <p>{{pet.description}}</p>
+      <ion-item ng-repeat="emp in employees" type="item-text-wrap" href="#/tab/pet/{{pet.id}}">
+        <h3>{{emp.id}}</h3>
+        <p>{{emp.description}}</p>
+        <p>{{emp.fname}}</p>
+        <p>{{emp.lname}}</p>
+          <p>{{emp.email}}</p>
+        <P></P>
       </ion-item>
       
     </ion-list>

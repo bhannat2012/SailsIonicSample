@@ -34,6 +34,13 @@
       If necessary, shut down and then lift your app again.
       
     -->
+      <!-- Bring in the socket.io client -->
+      <script type="text/javascript" src="/js/socket.io.js"></script>
+      <!-- then beef it up with some convenience logic for talking to Sails.js -->
+      <script type="text/javascript" src="/js/sails.io.js"></script>
+      <!-- listen on socket.io for incoming messages -->
+      <script type="text/javascript" src="/js/app.js"></script>
+
       <!-- ionic css -->
       <link href="/ionic/lib/css/ionic.css" rel="stylesheet">
 
@@ -46,6 +53,7 @@
       <script src="/ionic/js/app.js"></script>
       <script src="/ionic/js/services.js"></script>
       <script src="/ionic/js/controllers.js"></script>
+      <script src="/ionic/angular/socket-provider.js"></script>
 
   </head>
 
@@ -65,12 +73,6 @@
 
       Here's an example of importing a few dependencies, in order:
     -->
-    <!-- Bring in the socket.io client -->
-    <script type="text/javascript" src="/js/socket.io.js"></script>
-    <!-- then beef it up with some convenience logic for talking to Sails.js -->
-    <script type="text/javascript" src="/js/sails.io.js"></script>
-    <!-- listen on socket.io for incoming messages -->
-    <script type="text/javascript" src="/js/app.js"></script>
 
     <!-- Your scripts here? -->
     <!-- Your scripts here? -->
