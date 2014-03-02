@@ -1,112 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <!--
         For demonstration purposes, the `title` is dynamically set here based on
         your `sails.config.appName` to show that you can inject data into layouts
         exactly the same way as with your other view templates.
     -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><%- title %></title>
-
     <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="/foundation/css/normalize.css"/>
+    <link rel="stylesheet" href="/foundation/css/foundation.css"/>
+    <script src="/foundation/js/vendor/modernizr.js"></script>
+    <script src="/foundation/js/vendor/jquery.js"></script>
     <!--
-
       Stylesheets
       ========================
-
       You can link any CSS, LESS, or image files in your `assets` directory
       as you would normally: using <link/> tags.
       
     -->
-
     <!--
-
       Support for LESS included by default
       ================================================
-
       LESS files are automatically compiled when they change using the Gruntfile
       located in the top-level of this Sails app.  If you run into issues with styles
       not reloading, check the Sails log output in your console for LESS compilation errors.
       If necessary, shut down and then lift your app again.
       
     -->
-      <!-- Bring in the socket.io client -->
-      <script type="text/javascript" src="/js/socket.io.js"></script>
-      <!-- then beef it up with some convenience logic for talking to Sails.js -->
-      <script type="text/javascript" src="/js/sails.io.js"></script>
-      <!-- listen on socket.io for incoming messages -->
-      <script type="text/javascript" src="/js/app.js"></script>
+    <!-- Bring in the socket.io client -->
+    <script type="text/javascript" src="/js/socket.io.js"></script>
+    <!-- then beef it up with some convenience logic for talking to Sails.js -->
+    <script type="text/javascript" src="/js/sails.io.js"></script>
+    <!-- listen on socket.io for incoming messages -->
+    <script type="text/javascript" src="/js/app.js"></script>
+    ionic css
+    <link href="/ionic/lib/css/ionic.css" rel="stylesheet">
+    <!-- your app's css -->
+    <link href="/ionic/css/app.css" rel="stylesheet">
+    <!-- ionic/angularjs scripts -->
+    <script src="/ionic/lib/js/ionic.bundle.js"></script>
+    <!-- your app's script -->
+    <script src="/ionic/angular/socket-provider.js"></script>
 
-      <!-- ionic css -->
-      <link href="/ionic/lib/css/ionic.css" rel="stylesheet">
+    <script src="/js/app.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/controllers.js"></script>
+</head>
+<body>
 
-      <!-- your app's css -->
-      <link href="/ionic/css/app.css" rel="stylesheet">
+<nav class="top-bar" data-topbar="" data-options="is_hover: false">
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1><a href="#">Clickable Top Bar</a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+    <section class="top-bar-section">
 
-      <!-- ionic/angularjs scripts -->
-      <script src="/ionic/lib/js/ionic.bundle.js"></script>
-      <!-- your app's script -->
-      <script src="/ionic/js/app.js"></script>
-      <script src="/ionic/js/services.js"></script>
-      <script src="/ionic/js/controllers.js"></script>
-      <script src="/ionic/angular/socket-provider.js"></script>
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li class="divider hide-for-small"></li>
+            <li class="has-dropdown"><a href="#">Main Item 1</a>
+                <ul class="dropdown">
+                    <li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
+                    <li><label>Dropdown Level 1 Label</label></li>
+                    <li class="has-dropdown"><a href="#">Dropdown Level 1a</a>
 
-  </head>
+                        <ul class="dropdown">
+                            <li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
+                            <li><a href="#">Dropdown Level 2a</a></li>
+                            <li><a href="#">Dropdown Level 2b</a></li>
+                            <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
 
-  <body>
+                                <ul class="dropdown">
+                                    <li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5>
+                                    </li>
+                                    <li><a href="#">Dropdown Level 3a</a></li>
+                                    <li><a href="#">Dropdown Level 3b</a></li>
+                                    <li><a href="#">Dropdown Level 3c</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Dropdown Level 2d</a></li>
+                            <li><a href="#">Dropdown Level 2e</a></li>
+                            <li><a href="#">Dropdown Level 2f</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Dropdown Level 1b</a></li>
+                    <li><a href="#">Dropdown Level 1c</a></li>
+                    <li class="divider"></li>
+                    <li><label>Dropdown Level 1 Label</label></li>
+                    <li><a href="#">Dropdown Level 1d</a></li>
+                    <li><a href="#">Dropdown Level 1e</a></li>
+                    <li><a href="#">Dropdown Level 1f</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">See all →</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</nav>
 
-    <!-- Include the view file for the current controller/route -->
-    <%- body %>
-
-
-    <!--
-
-      Client-side Javascript
-      ========================
-
-      You can import any js files in your `assets` directory as you would 
-      normally: using <script></script> tags.
-
-      Here's an example of importing a few dependencies, in order:
-    -->
-
-    <!-- Your scripts here? -->
-    <!-- Your scripts here? -->
-    <!-- Your scripts here? -->
-
-
-    <!--
-
-      Looking for client-side CoffeeScript or TypeScript?
-      ================================================
-
-      CoffeeScript and TypeScript precompilation are not installed by default,
-      but if you'd like to mix those features in, it is straightforward to
-      `npm install` the relevant grunt community modules and modify your Gruntfile
-      to use them.
-
-    -->
+<%- body %>
 
 
+<script src="/foundation/js/foundation.min.js"></script>
 
-    <!--
+<script>
+    $(document).foundation();
+</script>
 
-      Another way: The Asset Linker
-      ========================
-
-      Sails supports a Grunt-based asset linker, to automatically inject 
-      <link> and <script> tags, as well any client-side templates you're using
-      into your HTML layouts and views, respecting dependencies.
-
-      You created this Sails app with the asset linker disabled.
-      If you change your mind, check out the docs on the subject:
-      http://sailsjs.org/#!documentation/asset-management
-
-    -->
-
-    </body>
+</body>
 </html>
