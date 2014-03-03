@@ -20,7 +20,7 @@ module.exports = {
 
 
     index: function (req, res) {
-
+        res.json(sails.config.app.menu);
     },
 
     /**
