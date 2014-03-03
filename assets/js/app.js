@@ -69,5 +69,4 @@
   window.io
 
 );
-angular.module('emp.starter', ['ionic', 'emp.controllers' , 'emp.services']).
-    config();
+angular.module('emp', ['restangular', 'emp.controllers' , 'emp.services' ]);

@@ -1,2 +1,4 @@
 angular.module('emp.controllers', ['emp.services'])
-    .controller('')
+    .controller('welcomeCtl', [function () {
+        alert('welcome controller applied');
+    }])
